@@ -53,7 +53,6 @@
     { url: "https://winner1.site/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/c517cdb9-359c-417e-2506-9e3c34382600/public" },
     { url: "https://lula.asia/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/b3379438-2c35-4ba0-e4ef-a6ca90e6b100/public" },
     { url: "https://onetop.space/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/ca17535c-ddac-4664-4dcd-da171cec5d00/public" },
-    { url: "http://jp-7777.com/@5rrPo", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/7c55f7ee-b6e8-4ec5-9c63-cbdec3653e00/public" },
     { url: "https://xn--jp2bl9m0na51v.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/3e2b4101-5992-47fa-3ed5-31aeb4f0df00/public" },
     { url: "http://rc337.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/20199e87-2b76-4011-2412-fcb5c5164a00/public" },
     { url: "http://dg745.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/ecf0c844-3ea7-48e1-d565-ba1cadf15900/public" }
