@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 스타일 삽입
+  // 스타일 삽입 + CLS 최적화
   const style = document.createElement('style');
   style.textContent = `
     #banner-container {
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       justify-content: center;
       padding: 10px;
       background-color: transparent;
+      min-height: 200px; /* ✅ CLS 방지용 최소 높이 */
     }
     .banner {
       flex: 0 1 calc(25% - 10px);
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       background: #222;
       box-sizing: border-box;
       box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      aspect-ratio: 2 / 1; /* ✅ 이미지 공간 미리 확보 */
     }
     .banner img {
       display: block;
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.appendChild(style);
 
-  // 전체 배너
+  // 전체 배너 리스트
   const banners = [
     { url: "https://1bet1.one/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/4f4a6af4-213f-4dd0-38e4-db20582f8c00/public" },
     { url: "https://winner1.site/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/c517cdb9-359c-417e-2506-9e3c34382600/public" },
