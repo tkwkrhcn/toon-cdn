@@ -1,5 +1,20 @@
+<!-- ✅ 1. HTML에 미리 렌더링할 배너 2개 (eager로 LCP 최적화) -->
+<div id="banner-container">
+  <div class="banner">
+    <a href="https://a8l-audi.com/" target="_blank" rel="nofollow noopener noreferrer">
+      <img src="https://imagedelivery.net/YBuUVvHrWBzVF83Na77hDQ/42adcbce-2231-4973-8e14-0ee48c8b3f00/public" alt="a8l-audi.com" loading="eager">
+    </a>
+  </div>
+  <div class="banner">
+    <a href="https://aha-bmw.com/" target="_blank" rel="nofollow noopener noreferrer">
+      <img src="https://imagedelivery.net/YBuUVvHrWBzVF83Na77hDQ/ef33775e-5535-44d3-7638-9e6a0eaf6b00/public" alt="aha-bmw.com" loading="eager">
+    </a>
+  </div>
+</div>
+
+<!-- ✅ 2. 나머지 배너는 JS로 lazy 로딩 -->
+<script>
 (function () {
-  // 1. 스타일 동적 삽입
   const style = document.createElement('style');
   style.textContent = `
     #banner-container {
@@ -37,7 +52,6 @@
   `;
   document.head.appendChild(style);
 
-  // 2. 배너 데이터
   const fixedBanners = [
     { url: "https://xn--p49al7tolbl8o8tj.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/ff2d6728-7523-4452-bd48-ecdb8072a600/public" },
     { url: "https://xn--vy7ba476b.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/c4352a78-3a5f-42ce-5255-5f9be9ced200/public" },
@@ -47,8 +61,6 @@
   ];
 
   const banners = [
-    { url: "https://a8l-audi.com/", img: "https://imagedelivery.net/YBuUVvHrWBzVF83Na77hDQ/42adcbce-2231-4973-8e14-0ee48c8b3f00/public" },
-    { url: "https://aha-bmw.com/", img: "https://imagedelivery.net/YBuUVvHrWBzVF83Na77hDQ/ef33775e-5535-44d3-7638-9e6a0eaf6b00/public" },
     { url: "https://1bet1.one/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/4f4a6af4-213f-4dd0-38e4-db20582f8c00/public" },
     { url: "https://winner1.site/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/c517cdb9-359c-417e-2506-9e3c34382600/public" },
     { url: "https://lula.asia/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/b3379438-2c35-4ba0-e4ef-a6ca90e6b100/public" },
@@ -58,7 +70,6 @@
     { url: "http://dg745.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/ecf0c844-3ea7-48e1-d565-ba1cadf15900/public" }
   ];
 
-  // 3. 셔플 함수
   function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -67,13 +78,11 @@
   }
   shuffle(banners);
 
-  // 4. 배너 합치기
   const finalBanners = [...banners, ...fixedBanners];
 
-  // 5. DOM 생성
   const bannerContainer = document.getElementById('banner-container');
   if (bannerContainer) {
-    finalBanners.forEach(banner => {
+    finalBanners.forEach((banner, index) => {
       const a = document.createElement('a');
       a.href = banner.url;
       a.target = "_blank";
@@ -98,3 +107,4 @@
     });
   }
 })();
+</script>
