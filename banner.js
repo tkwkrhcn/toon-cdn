@@ -2,36 +2,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // 스타일 삽입 + CLS 최적화
   const style = document.createElement('style');
   style.textContent = `
-    #banner-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      padding: 10px;
-      background-color: transparent;
-      min-height: 200px; /* ✅ CLS 방지용 최소 높이 */
-    }
-    .banner {
-      flex: 0 1 calc(25% - 10px);
-      max-width: calc(25% - 10px);
-      border: 1px solid #444;
-      border-radius: 8px;
-      background: #222;
-      box-sizing: border-box;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      aspect-ratio: 2 / 1; /* ✅ 이미지 공간 미리 확보 */
-    }
-    .banner img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    @media (max-width: 768px) {
-      .banner {
-        flex: 0 1 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-      }
-    }
+#banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.banner {
+  flex: 0 1 calc(25% - 10px);
+  max-width: calc(25% - 10px);
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #222;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  height: auto;
+  overflow: hidden;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .banner {
+    flex: 0 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
   `;
   document.head.appendChild(style);
 
