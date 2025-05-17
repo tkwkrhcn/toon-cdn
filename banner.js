@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   padding: 10px;
   background-color: transparent;
 }
-
 .banner {
   flex: 0 1 calc(25% - 10px);
   max-width: calc(25% - 10px);
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
   height: auto;
   overflow: hidden;
 }
-
 .banner img {
   display: block;
   width: 100%;
@@ -33,11 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     flex: 0 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
   }
-}
-  `;
+}`;
   document.head.appendChild(style);
 
-  // 전체 배너 리스트
+  // 고정 순서 배너 리스트
   const banners = [
     { url: "https://benz-Sclass.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/6ee90779-8035-4a00-fbb0-5f9477bf6700/public" },
     { url: "https://aha-v500.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/60f20e5f-c9a5-48fb-6352-b94a65860400/public" },
@@ -49,16 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: "https://xn--k01bo01c.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/e7ffbf88-05fc-43cb-c033-2b0419995d00/public" }
   ];
 
-  // 🔁 랜덤 섞기
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
-  shuffle(banners);
-
-  // 삽입
   const container = document.getElementById('banner-container');
   if (!container) return;
 
