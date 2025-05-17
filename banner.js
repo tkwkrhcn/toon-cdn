@@ -40,12 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // 전체 배너 리스트
   const banners = [
     { url: "https://benz-Sclass.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/6ee90779-8035-4a00-fbb0-5f9477bf6700/public" },
-    { url: "https://aha-v500.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/60f20e5f-c9a5-48fb-6352-b94a65860400/public" },
+    { url: "https://benz-Sclass.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/6ee90779-8035-4a00-fbb0-5f9477bf6700/public" },
+    { url: "https://benz-Sclass.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/6ee90779-8035-4a00-fbb0-5f9477bf6700/public" },
     { url: "https://benz-Sclass.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/6ee90779-8035-4a00-fbb0-5f9477bf6700/public" },
     { url: "https://aha-v500.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/60f20e5f-c9a5-48fb-6352-b94a65860400/public" },
+    { url: "https://aha-v500.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/60f20e5f-c9a5-48fb-6352-b94a65860400/public" },
+    { url: "https://aha-v500.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/60f20e5f-c9a5-48fb-6352-b94a65860400/public" },
+    { url: "https://aha-v500.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/60f20e5f-c9a5-48fb-6352-b94a65860400/public" },
+    { url: "https://joatoon68.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/182b8e5f-e5b7-494b-dd67-d567235fad00/public" },
+    { url: "https://joatoon68.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/182b8e5f-e5b7-494b-dd67-d567235fad00/public" },
     { url: "https://xn--vy7ba476b.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/c4352a78-3a5f-42ce-5255-5f9be9ced200/public" },
-    { url: "https://joatoon68.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/182b8e5f-e5b7-494b-dd67-d567235fad00/public" },
-    { url: "https://joatoon68.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/182b8e5f-e5b7-494b-dd67-d567235fad00/public" },
     { url: "https://xn--k01bo01c.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/e7ffbf88-05fc-43cb-c033-2b0419995d00/public" }
   ];
 
