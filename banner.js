@@ -1,5 +1,6 @@
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-  // 스타일 삽입 + CLS 최적화
+  // 스타일 삽입
   const style = document.createElement('style');
   style.textContent = `
 #banner-container {
@@ -8,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   gap: 10px;
   justify-content: center;
   padding: 10px;
-  background-color: transparent;
 }
 
 .banner {
@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
   background: #222;
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  height: auto;
   overflow: hidden;
 }
 
@@ -28,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   width: 100%;
   height: auto;
 }
+
 @media (max-width: 768px) {
   .banner {
     flex: 0 1 calc(50% - 10px);
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.appendChild(style);
 
-  // 전체 배너 리스트
+  // 배너 목록 (고정 순서)
   const banners = [
     { url: "https://benz-Sclass.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/6ee90779-8035-4a00-fbb0-5f9477bf6700/public" },
     { url: "https://benz-Sclass.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/6ee90779-8035-4a00-fbb0-5f9477bf6700/public" },
@@ -53,37 +53,26 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: "https://xn--k01bo01c.com/", img: "https://imagedelivery.net/hn8cyNBhDj7fHt_rfVXsFQ/e7ffbf88-05fc-43cb-c033-2b0419995d00/public" }
   ];
 
-  // 🔁 랜덤 섞기
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
-  shuffle(banners);
-
-  // 삽입
   const container = document.getElementById('banner-container');
   if (!container) return;
 
-  // banners.forEach(b => {
+  banners.forEach(b => {
     const div = document.createElement('div');
     div.className = 'banner';
 
     const a = document.createElement('a');
     a.href = b.url;
-    a.target = "_blank";
-    a.rel = "nofollow noopener noreferrer";
+    a.target = '_blank';
+    a.rel = 'nofollow noopener noreferrer';
 
     const img = document.createElement('img');
     img.src = b.img;
     img.alt = new URL(b.url).hostname;
-    img.width = 320;
-    img.height = 160;
-    img.loading = "lazy";
+    img.loading = 'lazy';
 
     a.appendChild(img);
     div.appendChild(a);
     container.appendChild(div);
   });
 });
+</script>
