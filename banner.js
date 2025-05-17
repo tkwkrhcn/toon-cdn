@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById('banner-container');
   if (!container) return;
 
-  banners.forEach(b => {
+  // banners.forEach(b => {
     const div = document.createElement('div');
     div.className = 'banner';
 
